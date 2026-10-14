@@ -1,0 +1,410 @@
+<!doctype html>
+<!--
+THESIS: CyberHive turns an explicitly approved source review into a human-readable engineering queue; its category-default promise of an autonomous army of live scanners is refused.
+OWN-WORLD: Electric cyan on ink-navy, cool-white operator panels, restrained amber authorization markers, and small uppercase instrumentation carry through the application.
+STORY: A developer reviews clearly marked demo examples, registers their own source and scope, explicitly attests authorization, and runs real, bounded browser-local checks; a simulated 320-role roster never pretends to have scanned.
+FIRST VIEWPORT: A persistent 252px navy navigation column frames a 1280px-capped dashboard; the headline, prominent Start a review action, simulated-data disclosure, and four balanced metric columns occupy the first view.
+FORM: A cohesive defensive security operations desk, grounded in the provided CyberHive master brief; visual seed and reference comp are unavailable because Node.js is not installed.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b111d">
+    <meta name="description" content="CyberHive is a permission-first source review demo: inspect code you supply, triage potential security issues, and keep simulated agents clearly separate from actual checks.">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; script-src 'self'; style-src 'self'; style-src-attr 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'none'">
+    <title>CyberHive AI — authorized security operations</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="security-engine.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar" id="sidebar" aria-label="CyberHive navigation">
+        <a class="brand" href="#dashboard" aria-label="CyberHive dashboard">
+          <span class="brand-symbol" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <path d="M20 3.5 35 12v16L20 36.5 5 28V12L20 3.5Z" stroke="currentColor" stroke-width="1.7"/>
+              <path d="m13.1 20.4 4.45 4.5 9.35-9.65" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+            </svg>
+          </span>
+          <span class="brand-word">cyberhive<span>ai</span></span>
+        </a>
+        <div class="workspace-switch">
+          <span class="workspace-glyph" aria-hidden="true">S</span>
+          <span class="workspace-copy"><strong>Sandbox workspace</strong><small>DEMO ENVIRONMENT</small></span>
+          <span class="chevron" aria-hidden="true">⌄</span>
+        </div>
+        <p class="nav-heading">WORKSPACE</p>
+        <nav class="side-nav" aria-label="Workspace navigation">
+          <a class="nav-link is-active" href="#dashboard" data-route="dashboard">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="2.5" width="6.25" height="6.25" rx="1"/><rect x="11.25" y="2.5" width="6.25" height="6.25" rx="1"/><rect x="2.5" y="11.25" width="6.25" height="6.25" rx="1"/><rect x="11.25" y="11.25" width="6.25" height="6.25" rx="1"/></svg>
+            Overview
+          </a>
+          <a class="nav-link" href="#projects" data-route="projects">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2.5 5.5h6l1.5 1.75h7.5v8.5H2.5z"/><path d="M2.5 8h15"/></svg>
+            Projects <span class="nav-count" id="nav-project-count">03</span>
+          </a>
+          <a class="nav-link" href="#assessments" data-route="history">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.25"/><path d="M10 6v4l2.8 1.7"/></svg>
+            Assessments
+          </a>
+          <a class="nav-link" href="#findings" data-route="findings">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2.5 18 17H2z"/><path d="M10 7v4m0 2.5v.1"/></svg>
+            Findings <span class="nav-count" id="nav-finding-count">04</span>
+          </a>
+          <a class="nav-link" href="#plans" data-route="plans">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.75" y="4" width="14.5" height="12" rx="1.4"/><path d="M3 8h14m-11 4h3"/></svg>
+            Plans &amp; pricing
+          </a>
+        </nav>
+        <p class="nav-heading nav-heading-spaced">INTELLIGENCE</p>
+        <nav class="side-nav" aria-label="Intelligence navigation">
+          <a class="nav-link" href="#agent-teams" data-route="agent-teams">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="7.25" cy="6.25" r="2.75"/><circle cx="13.5" cy="7" r="2.25"/><path d="M2 16c.45-2.65 2.3-4 5.25-4s4.8 1.35 5.25 4m.3-3.55c2.45.15 3.85 1.3 4.2 3.55"/></svg>
+            Agent teams
+            <span class="simulated-dot" aria-label="Simulation"></span>
+          </a>
+          <a class="nav-link" href="#trust" data-route="trust">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2.5 17 5v4.85c0 4.2-2.75 7.35-7 8.65-4.25-1.3-7-4.45-7-8.65V5l7-2.5Z"/><path d="m7 9.9 2 2 4-4"/></svg>
+            Trust &amp; scope
+          </a>
+        </nav>
+        <div class="sidebar-spacer"></div>
+        <div class="boundary-card">
+          <span class="boundary-symbol" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M10 2.5 17 5v4.85c0 4.2-2.75 7.35-7 8.65-4.25-1.3-7-4.45-7-8.65V5l7-2.5Z"/><path d="m7 9.9 2 2 4-4"/></svg></span>
+          <strong>Permission is the perimeter.</strong>
+          <p>Only review code you’re explicitly authorized to assess.</p>
+          <a href="#trust" data-route="trust">Review safety policy <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="profile-row">
+          <span class="profile-avatar" aria-hidden="true">D</span>
+          <span class="profile-copy"><strong>Developer sandbox</strong><small>Local-only demo</small></span>
+          <span class="demo-indicator" aria-label="Demo mode"></span>
+        </div>
+      </aside>
+
+      <div class="app-frame">
+        <header class="topbar">
+          <button class="mobile-menu" type="button" id="mobile-menu" aria-label="Open navigation" aria-expanded="false">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
+          </button>
+          <div class="breadcrumb"><span>Sandbox workspace</span><span aria-hidden="true">/</span><strong id="page-crumb">Overview</strong></div>
+          <div class="topbar-actions">
+            <span class="environment-pill"><span aria-hidden="true"></span> Simulated data</span>
+            <button class="button button-primary top-action" type="button" data-route="review"><span aria-hidden="true">+</span> Start a review</button>
+          </div>
+        </header>
+
+        <main id="main" class="main-content" tabindex="-1">
+          <section class="page-view is-current" data-view="dashboard" aria-labelledby="dashboard-title">
+            <div class="page-heading dashboard-heading">
+              <div>
+                <div class="page-kicker"><span class="eyebrow-mark" aria-hidden="true">CH</span> SECURITY OVERVIEW <span class="kicker-divider">/</span> SANDBOX</div>
+                <h1 id="dashboard-title">Security at a glance.</h1>
+                <p class="heading-subtitle">A clear picture of reviewed code, project boundaries, and work still to do.</p>
+              </div>
+              <button class="button button-secondary demo-tour-button" type="button" data-route="agent-teams"><span aria-hidden="true">◉</span> Explore demo teams</button>
+            </div>
+
+            <div class="demo-banner" role="note">
+              <span class="demo-banner-icon" aria-hidden="true">i</span>
+              <p><strong>DEMO ENVIRONMENT</strong> Example metrics, findings, projects, and worker activity are synthetic—not assessment results. Only the source files you submit on the assessment page are actually reviewed.</p>
+              <a href="#trust" data-route="trust">What’s real? <span aria-hidden="true">↗</span></a>
+            </div>
+
+            <div class="metrics-grid">
+              <article class="metric-panel">
+                <div class="metric-top"><span class="metric-label">DEMO PROJECTS</span><span class="metric-icon metric-icon-blue" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M2.5 5.5h6l1.5 1.75h7.5v8.5H2.5z"/><path d="M2.5 8h15"/></svg></span></div>
+                <div class="metric-number" id="metric-projects">03<span class="metric-unit">examples</span></div>
+                <p class="metric-foot"><span class="demo-chip">SAMPLE DATA</span> <span id="local-project-total">0 real local projects</span></p>
+              </article>
+              <article class="metric-panel">
+                <div class="metric-top"><span class="metric-label">DEMO ASSESSMENTS</span><span class="metric-icon metric-icon-lilac" aria-hidden="true"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7.25"/><path d="M10 6v4l2.8 1.7"/></svg></span></div>
+                <div class="metric-number">12<span class="metric-unit">examples</span></div>
+                <p class="metric-foot"><span class="demo-chip">SIMULATED</span> <span id="local-assessment-total">0 actual local reviews</span></p>
+              </article>
+              <article class="metric-panel">
+                <div class="metric-top"><span class="metric-label">DEMO FINDINGS</span><span class="metric-icon metric-icon-amber" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M10 2.5 18 17H2z"/><path d="M10 7v4m0 2.5v.1"/></svg></span></div>
+                <div class="metric-number">04<span class="metric-unit">examples</span></div>
+                <p class="metric-foot"><span class="demo-chip">TRAINING ONLY</span> No real findings yet</p>
+              </article>
+              <article class="metric-panel metric-panel-featured">
+                <div class="metric-top"><span class="metric-label">SPECIALIST ROSTER</span><span class="metric-icon metric-icon-cyan" aria-hidden="true"><svg viewBox="0 0 20 20"><circle cx="7.25" cy="6.25" r="2.75"/><circle cx="13.5" cy="7" r="2.25"/><path d="M2 16c.45-2.65 2.3-4 5.25-4s4.8 1.35 5.25 4"/></svg></span></div>
+                <div class="metric-number">320<span class="metric-unit">roles represented</span></div>
+                <p class="metric-foot"><span class="demo-chip demo-chip-cyan">SIMULATION</span> 0 AI workers executed</p>
+              </article>
+            </div>
+
+            <div class="section-head section-head-gap">
+              <div><h2>Work to inspect</h2><p>Synthetic training examples only. Nothing here came from scanning an application.</p></div>
+              <button class="text-action" type="button" data-route="findings">Open finding queue <span aria-hidden="true">→</span></button>
+            </div>
+
+            <div class="overview-grid">
+              <section class="panel findings-panel" aria-label="Synthetic demo findings">
+                <div class="panel-heading">
+                  <div><h3>Training examples</h3><span class="panel-micro">FICTIONAL SOURCE SNIPPETS · NOT VERIFIED</span></div>
+                  <span class="panel-total">04 <span>examples</span></span>
+                </div>
+                <div id="overview-findings"></div>
+                <div class="panel-footer"><span>Example data resets when you reload this page.</span><button type="button" class="text-action" data-route="findings">View examples →</button></div>
+              </section>
+
+              <section class="panel activity-panel" aria-label="Simulated specialist activity">
+                <div class="panel-heading">
+                  <div><h3>Orchestration preview</h3><span class="panel-micro">STATIC SIMULATION · NO AGENTS RUN</span></div>
+                  <span class="simulation-badge"><span></span> SIMULATED</span>
+                </div>
+                <div class="activity-status">
+                  <span class="activity-orbit" aria-hidden="true"><span></span><span></span><span></span></span>
+                  <span><strong>0 real workers</strong><small>Agent tasking is a UI-only demonstration</small></span>
+                </div>
+                <div class="mini-roster" id="mini-roster"></div>
+                <button class="text-action activity-link" type="button" data-route="agent-teams">Explore 320 represented roles <span aria-hidden="true">→</span></button>
+              </section>
+            </div>
+
+            <section class="reality-strip">
+              <span class="reality-shield" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M10 2.5 17 5v4.85c0 4.2-2.75 7.35-7 8.65-4.25-1.3-7-4.45-7-8.65V5l7-2.5Z"/><path d="m7 9.9 2 2 4-4"/></svg></span>
+              <div><strong>What actually happens when you start a review?</strong><p>Your browser reads the source you provide, runs local text-based checks, then displays possible findings. It never contacts the listed repository or executes submitted code.</p></div>
+              <button class="button button-secondary" type="button" data-route="review">Review my source <span aria-hidden="true">→</span></button>
+            </section>
+          </section>
+
+          <section class="page-view" data-view="projects" aria-labelledby="projects-title" hidden>
+            <div class="page-heading">
+              <div><div class="page-kicker"><span class="eyebrow-mark">CH</span> WORKSPACE <span class="kicker-divider">/</span> PROJECTS</div><h1 id="projects-title">Project boundaries.</h1><p class="heading-subtitle">Demo projects are fictional. Local projects and scope notes stay in page memory.</p></div>
+              <button class="button button-primary" type="button" id="new-project-button"><span aria-hidden="true">+</span> Add a project</button>
+            </div>
+            <div class="demo-banner demo-banner-compact"><span class="demo-banner-icon">i</span><p><strong>NO REPOSITORY CONNECTED.</strong> Adding a repository URL records its label only; this demo never clones, fetches, or scans a remote repository.</p></div>
+            <div class="projects-summary"><span id="project-view-count">3 examples</span><span>LOCAL SOURCE REVIEWS REQUIRE A WRITTEN-PERMISSION ATTESTATION.</span></div>
+            <div class="project-list" id="project-list"></div>
+          </section>
+
+          <section class="page-view" data-view="review" aria-labelledby="assessment-title" hidden>
+            <div class="page-heading">
+              <div><div class="page-kicker"><span class="eyebrow-mark">CH</span> SOURCE REVIEW <span class="kicker-divider">/</span> CLIENT-LOCAL</div><h1 id="assessment-title">Review authorized source.</h1><p class="heading-subtitle">Read-only pattern checks, performed in this tab, on text you explicitly provide.</p></div>
+              <span class="local-only-pill"><span></span> Files stay in this tab</span>
+            </div>
+            <div class="scope-callout"><span aria-hidden="true">!</span><p><strong>No live-target scanning.</strong> This demo does not browse, call, clone, or probe URLs, endpoints, IP addresses, or repositories. Submitted source code is never uploaded, executed, stored, or sent to an AI.</p></div>
+            <div class="assessment-layout">
+              <form class="panel review-form" id="review-form">
+                <div class="form-title"><span class="step-mark">A</span><div><h2>Set the authorization boundary.</h2><p>A project label and precise local source scope are required.</p></div></div>
+                <label for="review-project">Project with written-permission attestation <span class="required-mark">*</span></label>
+                <select id="review-project" name="project" required></select>
+                <label for="review-scope">Approved files and scope <span class="required-mark">*</span></label>
+                <input id="review-scope" name="scope" maxlength="500" placeholder="e.g. auth.js, auth.test.js" required>
+                <p class="scope-input-hint">Enter exact authorized basenames separated by commas (no paths or wildcards). Paste text is named <code>pasted-source.[language]</code> and must also be authorized.</p>
+                <label class="authorization-check"><input type="checkbox" id="authorization-check" required><span>I have written permission to assess this project and the exact source files I’m providing.</span></label>
+                <div class="form-title source-step"><span class="step-mark step-mark-cyan">B</span><div><h2>Provide source text to inspect.</h2><p>Only text-based source and configuration files; no archives or binary files.</p></div></div>
+                <label for="source-files" class="upload-drop">
+                  <span class="upload-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5"/><path d="M5 14v4.5h14V14"/></svg></span>
+                  <span class="upload-copy"><strong>Choose files to review</strong><span>or paste source below · up to 15 files · 2 MB total</span></span>
+                  <span class="upload-browse">Browse files</span>
+                  <input id="source-files" type="file" multiple accept=".js,.jsx,.ts,.tsx,.mjs,.cjs,.py,.java,.go,.rb,.php,.cs,.c,.h,.cpp,.hpp,.rs,.swift,.kt,.html,.htm,.css,.scss,.sql,.json,.yaml,.yml,.toml,.sh,.xml,.vue,.svelte,.md,.txt">
+                </label>
+                <div id="selected-files" class="selected-files" aria-live="polite"><span>No files selected yet.</span></div>
+                <div class="paste-label-row"><label for="pasted-source">Paste code instead <span class="optional-label">optional if source files are selected</span></label><label class="language-picker" for="pasted-language">LANGUAGE <select id="pasted-language" aria-label="Language of pasted source"><option value="js">JavaScript</option><option value="ts">TypeScript</option><option value="py">Python</option><option value="java">Java</option><option value="go">Go</option><option value="php">PHP</option><option value="html">HTML</option><option value="sql">SQL</option><option value="json">JSON</option><option value="yaml">YAML</option></select></label></div>
+                <textarea id="pasted-source" maxlength="500000" rows="8" spellcheck="false" placeholder="Paste authorized source here. Text stays in this browser tab; it is never uploaded or executed."></textarea>
+                <div class="source-meta"><span id="source-counter">0 / 500,000 characters</span><span>MAX 15 FILES · 2 MB TOTAL</span></div>
+                <p class="form-error" id="review-error" role="alert" hidden></p>
+                <p class="form-feedback" id="review-progress" role="status" hidden></p>
+                <div class="form-actions">
+                  <p><span aria-hidden="true">⌁</span> Local, deterministic checks · no external connections</p>
+                  <button class="button button-primary" id="run-review-button" type="submit">Review this source <span aria-hidden="true">↗</span></button>
+                </div>
+              </form>
+              <aside class="panel rules-panel">
+                <p class="panel-micro">WHAT THIS MVP CHECKS</p>
+                <h3>A careful first pass.</h3>
+                <p>Static, line-oriented heuristics flag patterns that deserve human review. A flag is not a confirmed vulnerability or a CVSS score.</p>
+                <div class="rule-list">
+                  <p><span class="rule-dot rule-dot-red"></span> Possible hard-coded credentials</p>
+                  <p><span class="rule-dot rule-dot-orange"></span> Risky SQL or command construction</p>
+                  <p><span class="rule-dot rule-dot-yellow"></span> Dynamic HTML or code execution</p>
+                  <p><span class="rule-dot rule-dot-blue"></span> Overly permissive CORS or TLS settings</p>
+                </div>
+                <div class="unscanned-note"><strong>NOT INCLUDED</strong><span>Dependency feeds, reachability analysis, infrastructure review, proof of exploitability, or a replacement for a dedicated scanner.</span></div>
+                <div class="scope-reminder"><span aria-hidden="true">✓</span><p>Outputs are provisional observations. Review the cited source and your authorization before taking action.</p></div>
+              </aside>
+            </div>
+            <section class="run-progress-card panel" id="run-progress-card" hidden aria-live="polite">
+              <div class="progress-top"><span class="spinner" aria-hidden="true"></span><span><strong id="progress-title">Checking supplied files…</strong><small id="progress-detail">Only files selected in this tab are being inspected.</small></span><button class="button button-secondary cancel-button" id="cancel-review-button" type="button">Cancel review</button></div>
+              <div class="progress-track"><span id="progress-fill"></span></div><div class="progress-caption" id="progress-caption">Preparing local checks…</div>
+            </section>
+            <section class="run-result panel" id="run-result" hidden aria-live="polite"></section>
+          </section>
+
+          <section class="page-view" data-view="findings" aria-labelledby="findings-title" hidden>
+            <div class="page-heading">
+              <div><div class="page-kicker"><span class="eyebrow-mark">CH</span> RISK QUEUE <span class="kicker-divider">/</span> HUMAN REVIEW</div><h1 id="findings-title">Potential findings.</h1><p class="heading-subtitle">Possible code patterns, not confirmed vulnerabilities. Sample findings are synthetic.</p></div>
+              <button class="button button-primary" type="button" data-route="review"><span aria-hidden="true">+</span> Review source</button>
+            </div>
+            <div class="demo-banner demo-banner-compact"><span class="demo-banner-icon">i</span><p><strong>TRAINING EXAMPLES ARE NOT REAL ASSESSMENT RESULTS.</strong> Findings from the browser-local source review are marked separately and retain their source line numbers and excerpts.</p></div>
+            <div class="finding-controls">
+              <label class="filter-search"><span class="visually-hidden">Search finding names or files</span><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.8" cy="8.8" r="5.9"/><path d="m13.2 13.2 4 4"/></svg><input id="finding-search" type="search" placeholder="Search title or file…"></label>
+              <label class="severity-filter"><span class="visually-hidden">Filter potential findings by severity</span><select id="severity-filter"><option value="all">All severities</option><option value="Critical">Critical</option><option value="High">High</option><option value="Medium">Medium</option><option value="Low">Low</option></select></label>
+              <div class="source-tabs" role="group" aria-label="Finding source">
+                <button class="source-tab is-active" type="button" data-source="all" aria-pressed="true">All findings</button>
+                <button class="source-tab" type="button" data-source="local" aria-pressed="false">Your local reviews <span id="local-finding-count">0</span></button>
+                <button class="source-tab" type="button" data-source="demo" aria-pressed="false">Training examples</button>
+              </div>
+              <span class="finding-total" id="finding-total">4 examples</span>
+            </div>
+            <div class="finding-table-wrap">
+              <table class="finding-table">
+                <thead><tr><th scope="col">POTENTIAL ISSUE</th><th scope="col">PROJECT / FILE</th><th scope="col">SEVERITY</th><th scope="col">STATE</th><th scope="col"><span class="visually-hidden">View details</span></th></tr></thead>
+                <tbody id="finding-rows"></tbody>
+              </table>
+              <p class="table-empty" id="finding-empty" hidden>No findings match those filters. Try another search, severity, or source.</p>
+            </div>
+            <section class="finding-detail panel" id="finding-detail" hidden aria-labelledby="finding-detail-title">
+              <div class="detail-heading"><div><span class="panel-micro" id="detail-provenance"></span><h2 id="finding-detail-title"></h2></div><button class="icon-button" id="close-finding-detail" type="button" aria-label="Close finding details">×</button></div>
+              <div class="detail-badges" id="detail-badges"></div>
+              <p class="detail-description" id="detail-description"></p>
+              <div class="detail-code-wrap"><div class="detail-code-header"><span id="detail-file"></span><span id="detail-line"></span></div><pre class="detail-code"><code id="detail-snippet"></code></pre></div>
+              <div class="detail-remediation"><span class="remediation-symbol" aria-hidden="true">↗</span><div><strong>What to check next</strong><p id="detail-remediation"></p></div></div>
+            </section>
+          </section>
+
+          <section class="page-view" data-view="agent-teams" aria-labelledby="teams-title" hidden>
+            <div class="page-heading">
+              <div><div class="page-kicker"><span class="eyebrow-mark">CH</span> ORCHESTRATION <span class="kicker-divider">/</span> CONCEPT DEMO</div><h1 id="teams-title">A team of specialists.</h1><p class="heading-subtitle">An architecture sketch—not a running scanner, AI model, or completed assessment.</p></div>
+              <span class="simulation-badge simulation-badge-lg"><span></span> SIMULATION ONLY</span>
+            </div>
+            <div class="agent-disclaimer" role="note"><span aria-hidden="true">i</span><p><strong>None of the agents on this page are running.</strong> These are illustrative worker roles only. No live targets, repositories, code, or AI providers have been contacted by the simulation.</p></div>
+            <section class="panel orchestration-panel">
+              <div class="orchestration-header"><div><span class="panel-micro">ILLUSTRATIVE SCALING PLAN</span><h2>320 represented roles · 0 real workers</h2></div><span class="concurrency-tag"><span></span> No jobs executing</span></div>
+              <p class="orchestration-intro">Example team composition for a future authorization-gated architecture. Role counts are planning placeholders—not deployed agents, model calls, or independently verified analysis.</p>
+              <div class="team-total-bar" aria-label="Specialist team share of 320 proposed worker roles">
+                <span class="bar-recon" style="--share:15%"></span><span class="bar-code" style="--share:20%"></span><span class="bar-web" style="--share:15%"></span><span class="bar-api" style="--share:11.25%"></span><span class="bar-auth" style="--share:7.5%"></span><span class="bar-cloud" style="--share:7.5%"></span><span class="bar-dependencies" style="--share:8.75%"></span><span class="bar-logic" style="--share:5.625%"></span><span class="bar-verification" style="--share:5%"></span><span class="bar-reporting" style="--share:4.375%"></span>
+              </div>
+              <div class="team-grid" id="team-grid"></div>
+            </section>
+            <section class="guardrail-grid">
+              <article class="panel guardrail-panel"><span class="guardrail-number">01</span><h3>Policy before planning</h3><p>A future coordinator must validate written permission and exact project/file scope before it creates a task.</p></article>
+              <article class="panel guardrail-panel"><span class="guardrail-number">02</span><h3>Bound work, always</h3><p>Future jobs require explicit concurrency, per-task timeouts, cancellation, rate limits, and auditable status.</p></article>
+              <article class="panel guardrail-panel"><span class="guardrail-number">03</span><h3>Human-reviewed results</h3><p>A role assignment is not a real finding. Verify evidence; preserve uncertainty; let a human review any remediation.</p></article>
+            </section>
+          </section>
+
+          <section class="page-view" data-view="trust" aria-labelledby="trust-title" hidden>
+            <div class="page-heading"><div><div class="page-kicker"><span class="eyebrow-mark">CH</span> SAFETY &amp; PRIVACY <span class="kicker-divider">/</span> REQUIRED READING</div><h1 id="trust-title">Scope is not optional.</h1><p class="heading-subtitle">Clear authorization, least exposure, and honest descriptions of what this demo can do.</p></div></div>
+            <div class="trust-layout">
+              <section class="panel policy-panel">
+                <span class="policy-label"><span aria-hidden="true">!</span> PERMISSION POLICY</span><h2>Written permission comes first.</h2>
+                <p>Only inspect a code project you own or are explicitly authorized to assess. Your approval must cover the source files you supply. A domain, URL, API address, repository README, filename, prompt, or uploaded document is never permission to expand that boundary.</p>
+                <ul><li>Do not enter or provide third-party code without its owner's permission.</li><li>Exclude production access, credentials, live customer records, private keys, and personal data.</li><li>Stop if your authorization, file scope, or rights to share a source file are unclear.</li><li>Do not use an AI tool or model in this MVP to analyze code; no code leaves this browser tab.</li></ul>
+              </section>
+              <section class="panel reality-panel">
+                <span class="panel-micro">CAPABILITY LEDGER</span><h2>Demo truth, not a sales claim.</h2>
+                <dl>
+                  <div><dt>Source checks</dt><dd class="state-local">Real · in-browser heuristics</dd></div>
+                  <div><dt>Remote scans</dt><dd>Not implemented · no network probes</dd></div>
+                  <div><dt>320 agent roles</dt><dd class="state-simulated">Illustrative simulation · zero live agents</dd></div>
+                  <div><dt>Source uploads</dt><dd>Read as text only · never posted or executed</dd></div>
+                  <div><dt>Account / server / database</dt><dd>Not implemented · no account or cloud persistence</dd></div>
+                  <div><dt>Demo findings</dt><dd>Fictional training snippets · not assessment results</dd></div>
+                  <div><dt>Local results</dt><dd>Held in page memory · cleared when you reload</dd></div>
+                </dl>
+              </section>
+              <section class="panel future-controls">
+                <span class="panel-micro">BEFORE A LIVE SECURITY ASSESSMENT</span><h2>Planned safeguards—not features of this demo.</h2>
+                <p>Live scanning is explicitly not included. Any future scanner needs server-side tenant isolation, verifiable project ownership and scope, allowlisted target enforcement on every job, isolated file analysis, auditable permission records, safe rate limits, a kill switch, and human approval before disruptive actions.</p>
+              </section>
+              <section class="panel policy-commitments">
+                <h2>Cybersecurity use policy</h2>
+                <p>Use this prototype only for source you own or are expressly authorized to share. Your authorization must specifically cover every file in the exact filename scope; an attestation does not verify your rights.</p>
+                <ul>
+                  <li><strong>Stay in scope.</strong> Never use this interface to probe, access, or attempt to bypass controls on a live system. It does not scan domains, URLs, IP addresses, services, or repositories.</li>
+                  <li><strong>Keep sensitive data out.</strong> Do not supply secrets, keys, passwords, production data, customer records, or personal information. Use redacted or synthetic samples.</li>
+                  <li><strong>Do not misuse results.</strong> Potential pattern matches are not confirmed vulnerabilities or exploit instructions. Verify source context and your permission before acting.</li>
+                  <li><strong>Respect boundaries.</strong> Stop if consent, file scope, data rights, or safe handling is unclear. Do not use this demo to disrupt services or access another person's data.</li>
+                  <li><strong>Report problems responsibly.</strong> This demo has no security-response service or guaranteed monitoring. Do not send confidential source or credentials in a public report.</li>
+                </ul>
+              </section>
+              <section class="panel privacy-commitments">
+                <h2>Privacy and availability</h2>
+                <p>The app includes no accounts, checkout, analytics, telemetry, or backend storage. Project records and review results stay in page memory and are cleared when the page reloads. The source analyzer does not make network requests.</p>
+                <p>This public static site is hosted on GitHub Pages. GitHub may process request metadata under its <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer">privacy statement</a>. The app has no backend, and the source analyzer does not send submitted code to the host. Hosting does not provide privacy-law compliance or a security certification.</p>
+              </section>
+            </div>
+          </section>
+
+          <section class="page-view" data-view="plans" aria-labelledby="plans-title" hidden>
+            <div class="page-heading">
+              <div>
+                <div class="page-kicker"><span class="eyebrow-mark">CH</span> PRODUCT ROADMAP <span class="kicker-divider">/</span> TRANSPARENT PLANS</div>
+                <h1 id="plans-title">Security plans should earn trust.</h1>
+                <p class="heading-subtitle">A proposed path from a free local demo to a secure team product—without selling features that do not exist.</p>
+              </div>
+            </div>
+            <div class="demo-banner demo-banner-compact" role="note">
+              <span class="demo-banner-icon" aria-hidden="true">i</span>
+              <p><strong>NO SUBSCRIPTIONS ARE FOR SALE.</strong> Pricing, account creation, billing, and paid features are not configured. No checkout or charge can be made here.</p>
+              <a href="#trust" data-route="trust">Read the security policy <span aria-hidden="true">↗</span></a>
+            </div>
+            <section class="panel plans-ledger" aria-label="Proposed subscription plans">
+              <div class="plans-ledger-heading">
+                <div><span class="panel-micro">PRICING NOT SET · PRODUCT NOT FOR SALE</span><h2>Proposed plans, not live offers.</h2></div>
+                <span class="simulation-badge simulation-badge-lg"><span></span> ROADMAP ONLY</span>
+              </div>
+              <div class="plans-table-wrap">
+                <table class="plans-table">
+                  <caption>Illustrative plan structure. Future paid features depend on security, privacy, and service architecture that this prototype does not have.</caption>
+                  <thead>
+                    <tr><th scope="col">CAPABILITY</th><th scope="col"><span>Community</span><small>Available · $0</small></th><th scope="col"><span>Individual</span><small>Planned · price not set</small></th><th scope="col"><span>Team</span><small>Planned · price not set</small></th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><th scope="row">Browser-local pattern checks</th><td>Available in demo</td><td>Possible base feature</td><td>Possible base feature</td></tr>
+                    <tr><th scope="row">Source stays in your browser</th><td>Yes, for local review</td><td>Design requirement</td><td>Design requirement</td></tr>
+                    <tr><th scope="row">Accounts and cloud history</th><td>Not included</td><td>Not implemented</td><td>Not implemented</td></tr>
+                    <tr><th scope="row">Shared projects and team roles</th><td>Not included</td><td>Not included</td><td>Future proposal</td></tr>
+                    <tr><th scope="row">Verified authorization and audit trail</th><td>Not included</td><td>Required before launch</td><td>Required before launch</td></tr>
+                    <tr><th scope="row">Real AI agents or live scanning</th><td>Not included</td><td>Not included</td><td>Not included</td></tr>
+                    <tr><th scope="row">Checkout or recurring billing</th><td>No</td><td>No</td><td>No</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="plans-footnote">
+                <strong>No payment or account data is requested.</strong>
+                <span>Every local pattern match remains unverified. Nothing about a future paid tier would imply authorization verification, comprehensive analysis, or a guarantee that code is secure.</span>
+              </div>
+            </section>
+            <section class="policy-principle">
+              <span class="reality-shield" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M10 2.5 17 5v4.85c0 4.2-2.75 7.35-7 8.65-4.25-1.3-7-4.45-7-8.65V5l7-2.5Z"/><path d="m7 9.9 2 2 4-4"/></svg></span>
+              <div><strong>Security before monetization.</strong><p>Accounts, verified permission, protected storage, service monitoring, incident handling, and a tested billing backend must be built and reviewed before any paid plan launches.</p></div>
+              <a class="button button-secondary" href="#trust" data-route="trust">Review safeguards <span aria-hidden="true">↗</span></a>
+            </section>
+          </section>
+
+          <section class="page-view" data-view="assessments" aria-labelledby="history-title" hidden>
+            <div class="page-heading"><div><div class="page-kicker"><span class="eyebrow-mark">CH</span> WORKSPACE <span class="kicker-divider">/</span> ASSESSMENTS</div><h1 id="history-title">Review history.</h1><p class="heading-subtitle">Historical examples are synthetic. Real results are available only for text you submitted in this page session.</p></div><button class="button button-primary" type="button" data-route="review">Start local review <span aria-hidden="true">↗</span></button></div>
+            <div class="demo-banner demo-banner-compact"><span class="demo-banner-icon">i</span><p><strong>12 SYNTHETIC ASSESSMENT EXAMPLES.</strong> The demo timeline demonstrates workflow states; it does not represent completed security tests.</p></div>
+            <div class="history-grid" id="history-grid"></div>
+          </section>
+
+          <footer class="app-footer"><span>CYBERHIVE AI <span aria-hidden="true">/</span> AUTHORIZATION BEFORE ANALYSIS</span><span>Static browser MVP <span aria-hidden="true">·</span> no backend configured</span><a href="#trust" data-route="trust">Safety &amp; scope <span aria-hidden="true">↗</span></a></footer>
+        </main>
+      </div>
+    </div>
+
+    <dialog class="dialog" id="project-dialog" aria-labelledby="project-dialog-title">
+      <form class="dialog-form" id="project-form">
+        <div class="dialog-header"><div><span class="panel-micro">LOCAL-ONLY PROJECT SETUP</span><h2 id="project-dialog-title">Register an authorized project.</h2></div><button class="icon-button" type="button" id="close-project-dialog" aria-label="Close project form">×</button></div>
+        <p class="dialog-explainer">Project details stay in this tab’s memory. No account, repository connection, ownership check, or server is configured. Enter the exact authorized source filenames separated by commas.</p>
+        <label for="project-name">Project name <span class="required-mark">*</span></label>
+        <input id="project-name" name="project-name" maxlength="80" required placeholder="e.g. Checkout service">
+        <label for="project-repository">Repository reference <span class="optional-label">optional · never fetched</span></label>
+        <input id="project-repository" name="project-repository" maxlength="200" placeholder="e.g. organization/private-repo or a repository URL">
+        <label for="project-scope">Authorized source scope <span class="required-mark">*</span></label>
+        <input id="project-scope" name="project-scope" maxlength="500" required placeholder="e.g. checkout.js, checkout.test.js">
+        <label class="authorization-check dialog-attestation"><input id="project-authorization" type="checkbox" required><span>I have the owner’s written permission to assess this project within this exact scope.</span></label>
+        <p class="form-error" id="project-error" role="alert" hidden></p>
+        <div class="dialog-actions"><button class="button button-secondary" type="button" id="cancel-project-dialog">Cancel</button><button class="button button-primary" type="submit">Add project <span aria-hidden="true">↗</span></button></div>
+      </form>
+    </dialog>
+  </body>
+</html>

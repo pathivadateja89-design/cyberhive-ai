@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b111d">
+    <title>CyberHive AI · local source analyzer tests</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tests.css">
+    <script src="security-engine.js" defer></script>
+    <script src="tests.js" defer></script>
+  </head>
+  <body class="test-page">
+    <main class="main-content" aria-labelledby="test-title">
+      <div class="page-heading">
+        <div>
+          <div class="page-kicker"><span class="eyebrow-mark">CH</span> LOCAL, OFFLINE TESTS</div>
+          <h1 id="test-title">Source analyzer tests</h1>
+          <p class="heading-subtitle">These browser tests exercise only deterministic local text parsing; they never contact a scanner, service, or AI provider.</p>
+        </div>
+        <a class="button button-secondary" href="index.html#dashboard">Return to CyberHive</a>
+      </div>
+      <section class="panel test-panel" aria-live="polite">
+        <p id="test-status">Running source analyzer tests…</p>
+        <ol id="test-results"></ol>
+      </section>
+    </main>
+  </body>
+</html>

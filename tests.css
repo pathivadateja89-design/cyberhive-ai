@@ -1,0 +1,6 @@
+body.test-page { background: #0b111d; }
+.test-panel { padding: 16px; }
+.test-result-pass { color: #87dfbc; }
+.test-result-fail { color: #ff9196; }
+#test-status[data-state="pass"] { color: #8fe6c5; }
+#test-status[data-state="fail"] { color: #ff9196; }
