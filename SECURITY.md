@@ -20,7 +20,7 @@ This use policy describes the expected behavior for the demonstration; it is not
 
 ## Browser and hosting protections
 
-The public static site is hosted on GitHub Pages at <https://pathivadateja89-design.github.io/cyberhive-ai/>. GitHub Pages serves this repository's public site files; GitHub's policies govern its hosting and request processing. The app has no backend, and its source analyzer does not transmit submitted code.
+The public static site is hosted on GitHub Pages at <https://pathivadateja89-design.github.io/cyberhive-ai/>. GitHub Pages serves this repository's public site files; GitHub's policies govern its hosting and request processing. HTTPS enforcement is enabled, and the live response includes a `Strict-Transport-Security` header. The app has no backend, and its source analyzer does not transmit submitted code.
 
 `index.html` includes a Content Security Policy that allows only same-origin scripts and styles, disables connections, objects, and HTML form submissions, and restricts referrer disclosure to `no-referrer`. Existing CSS style attributes are permitted for UI presentation. This meta-delivered policy cannot provide response-header directives such as `frame-ancestors`. GitHub Pages is static hosting and does not offer project-level configuration of arbitrary security response headers; do not assume framing protection or other server-header controls that the host has not independently confirmed. Keep the browser policy restrictive and avoid claiming a security certification.
 
